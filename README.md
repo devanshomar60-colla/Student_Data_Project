@@ -1,39 +1,40 @@
 # 📊 Student Data Management System
 
-A Python + Pandas based project that performs student data cleaning, analysis, filtering, grouping, and visualization using CSV files.
-
-This project demonstrates the practical use of **Python** and **Pandas** for data preprocessing and analysis.
+A Python + Pandas based project that performs student data cleaning, analysis, filtering, grouping, sorting, and report generation using CSV files.
+This project demonstrates the practical use of **Python** and **Pandas** for real-world data preprocessing and analytics.
 
 ---
 
 ## 🚀 Features
 
-* Load student data from a CSV file
-* Clean and preprocess data
-* Assign Grades (A, B, C, D, E)
-* Determine Pass / Fail status
-* Calculate Performance Score
-* Filter students based on different conditions
-* Save filtered datasets into CSV files
-* Perform GroupBy analysis
-* Generate data visualizations
+- Load student data from CSV file  
+- Clean and preprocess data  
+- Assign Grades (A, B, C, D, E)  
+- Determine Pass / Fail status  
+- Calculate Performance Score  
+- Filter students based on conditions  
+- Sort student records  
+- Perform statistical analysis  
+- Generate group-wise insights  
+- Create final reports and export CSV files  
 
 ---
 
 ## 📂 Project Structure
-
-```text
 Student_Data_Project/
 │
 ├── output/
 │   ├── cleaned_data.csv
-│   ├── top_performing_students.csv
+│   ├── toppers.csv
 │   ├── failed_students.csv
 │   ├── attendance_below_75.csv
 │   ├── study_more_than_8_hours.csv
-│   ├── grade_summary.csv
+│   ├── top_performing_students.csv
+│   ├── report.csv
+│   ├── grade_distribution.csv
 │
 ├── student.csv
+│
 ├── Module1.py
 ├── Module2.py
 ├── Module3.py
@@ -42,165 +43,141 @@ Student_Data_Project/
 ├── Module6.py
 ├── Module7.py
 ├── Module8.py
+├── Module9.py
+├── Module10.py
+├── Module11.py
 └── README.md
-```
 
----
+Modules
 
-# 📘 Modules
+✅ Module 1 – Load Dataset
 
-## ✅ Module 1 – Load Dataset
+Import Pandas
+Load CSV file
+Display dataset
+Check rows and columns
 
-* Import Pandas
-* Load CSV file
-* Display dataset
-* Display first and last records
-* Check rows and columns
+✅ Module 2 – Data Cleaning
 
----
+Handle missing values
+Remove duplicates
+Clean dataset
+Save cleaned_data.csv
 
-## ✅ Module 2 – Data Cleaning
+✅ Module 3 – Data Transformation
 
-* Check missing values
-* Remove duplicates
-* Verify dataset
-* Save cleaned dataset
+Assign Grades (A–E)
+Assign Pass / Fail status
+Calculate Performance Score
 
----
+✅ Module 4 – Sorting & Filtering
 
-## ✅ Module 3 – Data Transformation
+Sort students by Marks
+Filter based on conditions
+Display selected records
 
-* Assign Grades
-* Assign Pass / Fail status
-* Calculate Performance Score
-* Save updated dataset
+✅ Module 5 – Data Extraction
 
----
+Create separate datasets:
+.Top Performing Students
+.Failed Students
+.Attendance < 75%
+.Study Hours > 8
 
-## ✅ Module 4 – Sorting & Filtering
+✅ Module 6 – Statistical Analysis
 
-* Sort students by Marks
-* Filter students using conditions
-* Display selected records
+Mean, Max, Min Marks
+Average Attendance
+Pass/Fail Count
+Overall performance summary
 
----
+✅ Module 7 – Display Module
 
-## ✅ Module 5 – Data Extraction
+Sort students by:
+Marks
+Attendance
+Study Hours
 
-Create separate CSV files for:
+✅ Module 8 – GroupBy Analysis
 
-* ⭐ Top Performing Students (Marks ≥ 85)
-* ❌ Failed Students
-* 📚 Students studying more than 8 hours
-* 📉 Students with Attendance below 75%
+Using groupby():
+.Average Marks by Grade
+.Students per Grade
+.Average Attendance per Grade
 
----
+✅ Module 9 – Advanced Filtering
 
-## ✅ Module 6 – Statistical Analysis
+Additional refined filters
+Identification of toppers and weak students
+Better structured analysis outputs
 
-Perform statistical analysis using Pandas:
+✅ Module 10 – Final Report Generation
 
-* Mean Marks
-* Maximum Marks
-* Minimum Marks
-* Average Attendance
-* Total Students
-* Pass Count
-* Fail Count
+Generates a structured report containing:
+.Total Students
+.Number of Passed Students
+.Number of Failed Students
+.Highest Marks
+.Lowest Marks
+.Average Marks
+.Average Attendance
+.Grade-wise distribution
 
----
+📁 Output:
 
-## ✅ Module 7 – Data Visualization
+report.csv
+grade_distribution.csv
+✅ Module 11 – Final Export System
+Consolidates all outputs
+Generates final datasets:
 
-Generate charts using Matplotlib:
+📁 Output Files:
 
-* Marks Distribution
-* Attendance Distribution
-* Grade Count
-* Study Hours vs Marks
+cleaned_data.csv
+toppers.csv
+failed_students.csv
+report.csv
 
----
+✔ Ensures all files are stored inside output/ folder
 
-## ✅ Module 8 – GroupBy Analysis
+🛠 Technologies Used
 
-Using `groupby()`:
+Python 🐍
+Pandas 📊
+NumPy
+Matplotlib (optional)
+CSV Handling
 
-* Average Marks by Grade
-* Number of Students in Each Grade
-* Average Attendance by Grade
+▶️ How to Run
 
-Example Output
-
-| Grade | Average Marks | Students | Average Attendance |
-| ----- | ------------: | -------: | -----------------: |
-| A     |         91.80 |        8 |              94.25 |
-| B     |         82.45 |       12 |              89.60 |
-| C     |         73.15 |       10 |              84.10 |
-| D     |         63.70 |        6 |              78.50 |
-| E     |         45.25 |        4 |              70.00 |
-
----
-
-## 🛠 Technologies Used
-
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* CSV
-
----
-
-## ▶️ How to Run
-
-Clone the repository:
-
-```bash
+Clone repository:
 git clone https://github.com/devanshomar60-colla/Student_Data_Project.git
-```
 
-Move into the project folder:
-
-```bash
+Go to project folder:
 cd Student_Data_Project
-```
 
 Install dependencies:
+pip install pandas numpy matplotlib
 
-```bash
-pip install pandas matplotlib numpy
-```
+Run modules:
 
-Run any module:
-
-```bash
 python Module1.py
 python Module2.py
 python Module3.py
-python Module4.py
-python Module5.py
-python Module6.py
-python Module7.py
-python Module8.py
-```
+...
+python Module11.py
 
----
+📈 Learning Outcomes:
 
-## 📈 Learning Outcomes
+This project helps to understand:
 
-This project demonstrates:
+.Data preprocessing
+.File handling in Python
+.Pandas operations
+.Data filtering & sorting
+.GroupBy analysis
+.Statistical reporting
+.Real-world data pipeline creation
 
-* CSV File Handling
-* Data Cleaning
-* Data Transformation
-* Data Filtering
-* Statistical Analysis
-* GroupBy Operations
-* Data Visualization
-* File Handling using Pandas
-
----
-
-## 👨‍💻 Author
-
+👨‍💻 Author
 Devansh Omar
