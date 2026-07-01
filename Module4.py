@@ -1,7 +1,9 @@
 import pandas as pd
-
+#pehele data lod karenge
 df = pd.read_csv("output/cleaned_data.csv")
 df["Marks"] = pd.to_numeric(df["Marks"], errors="coerce")
+#yaha par marks already numeric the par agar kabhi marks string ya 
+#character ke form me ho toh woh numeric me change ho jAYE
 
 # Grade function
 def assign_grade(marks):
@@ -19,7 +21,13 @@ def assign_grade(marks):
 # NEW COLUMN CREATE
 df["Grade"] = df["Marks"].apply(assign_grade)
 df["Result"] = df["Marks"].apply(lambda x: "Pass" if x >= 33 else "Fail")
-#performance Score
+'''performance Score
+Yeh ek formula hai:
+Marks = 50% importance
+Attendance = 30%
+Study Hours = 20%
+ Final score nikalta hai
+'''
 df["Performance_Score"] = (
     (df["Marks"] * 0.5) +
     (df["Attendance"] * 0.3) +
@@ -38,3 +46,4 @@ df["Performance_Level"] = df["Performance_Score"].apply(performance)
 print(df.head())
 #saving the final output
 df.to_csv("output/module4_transformed.csv", index=False)
+#git add . → git commit → git push
